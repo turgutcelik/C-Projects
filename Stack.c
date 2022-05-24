@@ -25,28 +25,28 @@ int main()
 		scanf( "%d", &secim );
 		
 		switch( secim ){
-		   case 1:
-			   	printf( "Eklenecek sayiyi giriniz: " );
-			   	scanf( "%d", &num );
-			   	push( num );
-			   	yazdir();
-			   	break;
+		    case 1:
+				printf( "Eklenecek sayiyi giriniz: " );
+				scanf( "%d", &num );
+				push( num );
+				yazdir();
+				break;
 		   
-		   case 2:
+		    case 2:
 				pop();
 		    	yazdir();
 		    	break;
 		   
-		   case 3:
+		    case 3:
 		        printf( "En ustteki deger: %d\n", peek() );
 		        break;
 		   
-		   default: 
+		    default: 
 			    printf( "Yanlis secim!\n" );
 				break;				
 		}
 		printf( "\n" );
-	   }
+	}
 	return 0;
 }
 
@@ -60,7 +60,7 @@ void menu()
 
 void push( int sayi )
 {
-	struct node*eklenecek = ( struct node* )malloc( sizeof( struct node ) );
+	struct node* eklenecek = ( struct node* )malloc( sizeof( struct node ) );
 	
 	eklenecek->data = sayi;
 	eklenecek->next = NULL;   
@@ -79,11 +79,11 @@ void pop(){
 		temp = top;
 		top = temp->next;
 		free( temp );
-	   }
+	}
 }
 
 int peek(){
-return top->data;
+	return top->data;
 }
 
 void yazdir(){
@@ -93,8 +93,6 @@ void yazdir(){
 	while( q != NULL ){
 	    printf( "%d<--", q->data );
 	    q = q->next;
- }	
-
-printf( "NULL\n" );	   	
-
+   }	
+	printf( "NULL\n" );	   	
 }

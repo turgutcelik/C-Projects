@@ -27,11 +27,11 @@ while( 1 ){
 	
 	switch ( secim ){
 		case 1:
-		    printf( "Eklenecek sayi: " );
-		    scanf( "%d", &sayi );
-		    basaEkle( sayi );
-		    yazdir();
-		    break;
+			printf( "Eklenecek sayi: " );
+			scanf( "%d", &sayi );
+			basaEkle( sayi );
+			yazdir();
+			break;
 		    
 		case 2:
 			printf( "Hangi sayinin onune ekleme yapmak istiyorsunuz?: " );
@@ -43,20 +43,20 @@ while( 1 ){
 			break;
 	
 		case 3:	
-		    printf( "Eklenecek sayi: " );
-		    scanf( "%d", &sayi );
-		    sonaEkle( sayi );
-		    yazdir();
-		    break;
+			printf( "Eklenecek sayi: " );
+			scanf( "%d", &sayi );
+			sonaEkle( sayi );
+			yazdir();
+			break;
 		 
 		case 4:	
 			printf( "Nereden eleman silmek istiyorsunuz?:" );
 			scanf( "%d", &sec );
 			printf( "Silinecek sayi: " );
-		    scanf( "%d", &sayi );
-		    elemanSil( sec, sayi );
-		    yazdir();
-		    break;
+			scanf( "%d", &sayi );
+			elemanSil( sec, sayi );
+			yazdir();
+			break;
 		 
 		case 5:
 		    tersCevir();
@@ -172,7 +172,7 @@ void tersCevir( void ){
 		prev = current;
 		current = temp; 
 }  
-start = prev;   
+	start = prev;   
 }
 
 void yazdir( void ){
