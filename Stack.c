@@ -18,44 +18,44 @@ void yazdir();
 
 int main()
 {
-int secim, num;
-
-while( 1 ){
-	menu();
-	scanf( "%d", &secim );
+	int secim, num;
 	
-	switch( secim ){
-	   case 1:
-		   	printf( "Eklenecek sayiyi giriniz: " );
-		   	scanf( "%d", &num );
-		   	push( num );
-		   	yazdir();
-		   	break;
-	   
-	   case 2:
-			pop();
-	    	yazdir();
-	    	break;
-	   
-	   case 3:
-	        printf( "En ustteki deger: %d\n", peek() );
-	        break;
-	   
-	   default: 
-		    printf( "Yanlis secim!\n" );
-			break;				
-	}
-	printf( "\n" );
-   }
-return 0;
+	while( 1 ){
+		menu();
+		scanf( "%d", &secim );
+		
+		switch( secim ){
+		   case 1:
+			   	printf( "Eklenecek sayiyi giriniz: " );
+			   	scanf( "%d", &num );
+			   	push( num );
+			   	yazdir();
+			   	break;
+		   
+		   case 2:
+				pop();
+		    	yazdir();
+		    	break;
+		   
+		   case 3:
+		        printf( "En ustteki deger: %d\n", peek() );
+		        break;
+		   
+		   default: 
+			    printf( "Yanlis secim!\n" );
+				break;				
+		}
+		printf( "\n" );
+	   }
+	return 0;
 }
 
 void menu()
 {
-printf("Secim 1: Push\n"
-       "Secim 2: Pop\n"
-	   "Secim 3: Peek\n"
-	   "Seciminiz: "); 	    
+	printf("Secim 1: Push\n"
+	       "Secim 2: Pop\n"
+		   "Secim 3: Peek\n"
+		   "Seciminiz: "); 	    
 }
 
 void push( int sayi )

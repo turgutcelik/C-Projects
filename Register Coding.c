@@ -19,23 +19,23 @@ void Delay(uint32_t time){
 
 int main(void)
 {
-  config();
-
-  while (1){
+	config();
+	
+	while (1){
 		GPIOD->ODR = 1111000000000000;	
 		Delay(16805552);	
 		GPIOD->ODR = 0000000000000000;	
 		Delay(16805552);
-
+	
 		GPIO_ToggleBits(GPIOD, GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
 		Delay(16805552);
-   }
+	}
 }
 
 void EVAL_AUDIO_TransferComplete_CallBack(uint32_t pBuffer, uint32_t Size){
-  return;
+	return;
 }
 
 uint16_t EVAL_AUDIO_GetSampleCallBack(void){
-  return -1;
+	return -1;
 }

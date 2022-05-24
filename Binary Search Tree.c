@@ -3,14 +3,14 @@
 
 struct node{
 	int data;
-	struct node *left;
-	struct node *right;
+	struct node* left;
+	struct node* right;
 };
 
-struct node *root = NULL;
-struct node *newNode( int );
-struct node *ekle( struct node*, int );
-struct node *search( int );
+struct node* root = NULL;
+struct node* newNode( int );
+struct node* ekle( struct node*, int );
+struct node* search( int );
 void inOrder( struct node* );
 
 int main()
@@ -45,7 +45,7 @@ while( 1 ){
 		default:
 			printf( "Yanlis secim! Tekrar deneyiniz.\n" );
 			break;
-	}	   
+	   }	   
 		        			
     printf( "\n" );	
    }
@@ -58,12 +58,12 @@ struct node *newNode( int key )
     struct node *temp = ( struct node* )malloc( sizeof ( struct node ) );
 
     temp->data = key;
- 	temp->left = NULL;
-    temp->right = NULL;
+	temp->left = NULL;
+	temp->right = NULL;
 
- 	if ( root == NULL )
+	if ( root == NULL )
         root = temp;
-    else
+	else
         return temp;
 }
 
@@ -75,7 +75,7 @@ struct node *ekle( struct node *node, int key )
 	    node->left = ekle( node->left, key );
 	else if( key > node->data )
 	    node->right = ekle( node->right, key );
-	    return node;	    
+		return node;	    
 }
 
 struct node *search( int aranan )
@@ -89,18 +89,18 @@ struct node *search( int aranan )
 		printf( "%d--> ", current->data );
 		 
 		if( aranan < current->data )
-		   current = current->left;
+			current = current->left;
 		else
-		   current = current->right;  
-	 }
+			current = current->right;  
+	}
 	       	
 	if( current == NULL){
 		printf( "Boyle bir sayi yok!\n" );
 		return NULL;
-	 }
+	}
 } 
- printf( " %d", current->data );
- return current;
+	printf( " %d", current->data );
+	return current;
 }
 
 void inOrder( struct node *root )

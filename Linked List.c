@@ -34,22 +34,22 @@ while( 1 ){
 		    break;
 		    
 		case 2:
-		 	printf( "Hangi sayinin onune ekleme yapmak istiyorsunuz?: " );
-		 	scanf( "%d", &onune );
-		 	printf( "Eklenecek sayi: " );
-		    scanf( "%d", &sayi );
-		    onuneEkle( onune, sayi );
-		    yazdir();
-		    break;
+			printf( "Hangi sayinin onune ekleme yapmak istiyorsunuz?: " );
+			scanf( "%d", &onune );
+			printf( "Eklenecek sayi: " );
+			scanf( "%d", &sayi );
+			onuneEkle( onune, sayi );
+			yazdir();
+			break;
 	
-		 case 3:	
+		case 3:	
 		    printf( "Eklenecek sayi: " );
 		    scanf( "%d", &sayi );
 		    sonaEkle( sayi );
 		    yazdir();
 		    break;
 		 
-		 case 4:	
+		case 4:	
 			printf( "Nereden eleman silmek istiyorsunuz?:" );
 			scanf( "%d", &sec );
 			printf( "Silinecek sayi: " );
@@ -58,14 +58,14 @@ while( 1 ){
 		    yazdir();
 		    break;
 		 
-		 case 5:
+		case 5:
 		    tersCevir();
 		    yazdir();
 		    break;
 		 			
-		 default:
-		    printf( "Yanlis secim. Tekrar deneyiniz.\n\n" );		
-	        break;
+		default:
+			printf( "Yanlis secim. Tekrar deneyiniz.\n\n" );		
+			break;
 		}      		
 }
 
@@ -76,8 +76,8 @@ void menu( void ){
 	printf( "Secim 1: Basa sayi ekle.\n"
 	        "Secim 2: Araya sayi ekle.\n" 
 	        "Secim 3: Sona sayi ekle.\n" 
-	       	"Secim 4: Eleman sil.\n"
-	       	"Secim 5: Ters cevir\n"
+	    	"Secim 4: Eleman sil.\n"
+	    	"Secim 5: Ters cevir\n"
 			"Seciminiz: " );     	
 }
 
@@ -139,7 +139,7 @@ void elemanSil( int sec, int sayi ){
 			temp = start;
 		
 			while( temp->next->veri != sayi )
-			    temp = temp->next;
+				temp = temp->next;
 			
 			temp2 = temp;
 			temp3 = temp->next->next; 
@@ -158,7 +158,7 @@ void elemanSil( int sec, int sayi ){
 				temp->next = NULL;
 			}		  	
 			break;
-	  }	
+	   }	
 }
 
 

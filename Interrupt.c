@@ -71,6 +71,7 @@ void EXTI1_IRQHandler(void){
 			delay(16800000);	
 			i++;
 		}while(i < 5);		
+		
 		EXTI_ClearITPendingBit(EXTI_Line1);
 	}
 }
@@ -98,9 +99,9 @@ int main(void){
 }
 
 void EVAL_AUDIO_TransferComplete_CallBack(uint32_t pBuffer, uint32_t Size){
-  return;
+	return;
 }
 
 uint16_t EVAL_AUDIO_GetSampleCallBack(void){
-  return -1;
+	return -1;
 }

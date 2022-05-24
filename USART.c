@@ -20,13 +20,13 @@ void delay_ms(uint16_t delay){
 	delay_cnt = delay;
 
 	while(delay_cnt){
-
 	}
 }
 
 void USART_Puts(USART_Typedef* USARTx, volatile char *s){
 	while(*s){
 		while(!(USARTx -> SR & 0x00000040));
+		
 		USART_SendData(USARTx, *s);
 		*s++;
 	}
@@ -41,6 +41,7 @@ void config(){
 	RXTX.GPIO_Pin = GPIO_Pin_2;
 	RXTX.GPIO_PuPd = GPIO_PuPd_UP;
 	RXTX.GPIO_Speed = GPIO_Speed_100MHz;
+	
 	GPIO_Init(GPIOA, &RXTX);
 	GPIO_PinAFConfig(GPIOA, GPIOA_PinSource2, GPIO_AF_USART2);
 
@@ -68,9 +69,9 @@ int main(void)
 }
 
 void EVAL_AUDIO_TransferComplete_CallBack(uint32_t pBuffer, uint32_t Size){
-  return;
+	return;
 }
 
 uint16_t EVAL_AUDIO_GetSampleCallBack(void){
-  return -1;
+	return -1;
 }
